@@ -1,0 +1,24 @@
+---
+title: "Height"
+author: "Nathan Rothschild"
+date: '2022-06-17'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Explore the height variable in the nhanes dataset in the primer.data package
+
+```{r, warning = FALSE}
+library(primer.data)
+library(tidyverse)
+
+## Make a histogram of height 
+
+ggplot(data = nhanes, mapping = aes(x = height)) + 
+  geom_histogram(bins = 100) +
+  labs()
+```
+
